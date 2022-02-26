@@ -25,7 +25,7 @@ http://gitpod.io#github_url
 
 1. Copy and paste Dockerfile.
 2. Copy and paste heroku.yml
-3. Copy and pase webapp/ files
+3. Create webapp/ copy and paste all files [app.py, requirements.txt, wsgi.py, templates/, base.html, index.html]
 
 ### 1. Install libraries
 
