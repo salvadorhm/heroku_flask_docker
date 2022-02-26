@@ -23,6 +23,10 @@ http://gitpod.io#github_url
 
 ## Local development
 
+1. Copy and paste Dockerfile.
+2. Copy and paste heroku.yml
+3. Copy and pase webapp/ files
+
 ### 1. Install libraries
 
 Open webapp/ and run the next commands.
