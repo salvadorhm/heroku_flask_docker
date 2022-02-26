@@ -97,37 +97,66 @@ $ heroku login -i
 ### 4. Create remote container in Heroku
 
 ```bash
-$ heroku create webapp
+$ heroku create WEBAPP_NAME
+
+Creating ⬢ WEBAPP_NAME... done
+https://WEBAPP_NAME.herokuapp.com/ | https://git.heroku.com/WEBAPP_NAME.git
+```
+### 5. Create remote container login
+
+```bash
+$ heroku container:login
+
+WARNING! Your password will be stored unencrypted in /home/gitpod/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
 ```
 
-### 5. Push to remote container
+### 6. Push to remote container
 
 * This use the Dockerfile and heroku.yml for createa a remote contianer in Heroku.
 
 ```bash
 $ heroku container:push web
+
+=== Building web (/workspace/heroku-web.py-docker/Dockerfile)
+Sending build context to Docker daemon  92.67kB
+Step 1/12 : FROM ubuntu:20.04
+...
+Your image has been successfully pushed. You can now release it with the 'container:release' command.
 ```
 
-### 6. Release container
+### 7. Release container
 
 * If the remote container was succefull created, then relese the webapp.
 
 ```bash
 $ heroku container:release web
+
+=== Building web (/workspace/heroku_flask_docker/Dockerfile)
+Sending build context to Docker daemon  112.1kB
+Step 1/12 : FROM ubuntu:20.04
+20.04: Pulling from library/ubuntu
+...
 ```
 
-### 7. Open webapp
+### 8. Open webapp
 
 * Open in a Web Browser the Webapp deployed.
 
 ```bash
 $ heroku open
+
+* OPEN WEB BROWSER
 ```
 
-### 8. Logs webapp
+### 9. Logs webapp
 
 * Show the logs of the remote webapp.
 
 ```bash
 $ heroku logs --tail
+
 ```
