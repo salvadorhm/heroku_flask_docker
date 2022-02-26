@@ -10,14 +10,15 @@ Flask webapp sample with Heroku-Docker
 
 ## 2. Gitpod for development
 
-1. Create and account in https://gitpod.io - Use Github credentials.
+1. Create and account in [GITPOD](https://gitpod.io) - Use Github credentials.
 2. Copy the Github URL.
 3. Paste de Github URL in Gipod.
 
 ```bash
-http://gitpod.io#github_url
-```
+https://gitpod.io#GITHUB_REPO_URL
 
+* THIS CREATE A CONAINER WITH VS CODE 
+```
 
 ***
 
@@ -30,7 +31,6 @@ http://gitpod.io#github_url
 ### 1. Install libraries
 
 Open webapp/ and run the next commands.
-
 
 ```bash
 $ pip3 install -r requirements.txt
@@ -58,6 +58,7 @@ $ python3 app.py
  * Debugger is active!
  * Debugger PIN: 292-118-220
 ```
+
 ### 3. Run webapp  with gunicorn
 
 For deploy the webapp.
@@ -86,12 +87,20 @@ $ gunicorn --bind 0.0.0.0:8080 wsgi
 
 ```bash
 $ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1232  100  1232    0     0   7700      0 --:--:-- --:--:-- --:--:--  7652
+
 ```
 
 ### 3. Heroku login (Password -> Heroku Token)
 
 ```bash
 $ heroku login -i
+
+heroku: Enter your login credentials
+Email: 
 ```
 
 ### 4. Create remote container in Heroku
@@ -102,6 +111,7 @@ $ heroku create WEBAPP_NAME
 Creating ⬢ WEBAPP_NAME... done
 https://WEBAPP_NAME.herokuapp.com/ | https://git.heroku.com/WEBAPP_NAME.git
 ```
+
 ### 5. Create remote container login
 
 ```bash
